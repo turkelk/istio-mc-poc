@@ -43,20 +43,11 @@ global:
     # If not set and create is true, a name is generated using the fullname template
     name: ""
     
-  env: {}
-  # probes:
-  #   liveness:
-  #     path: /hc/live
-  #     initialDelaySeconds: 10
-  #     periodSeconds: 30
-  #     port: 80
-  #   readiness:
-  #     path: /hc/ready
-  #     timeoutSeconds: 5
-  #     initialDelaySeconds: 30
-  #     periodSeconds: 10
-  #     failureThreshold: 4
-  #     successThreshold: 1
-  #     port: 80     
+  env: 
+    values:
+      - name: ACCOUNTS_URL
+        value: helm-accounts-ms-base.banking.svc.cluster.local  
+      - name: LIMITS_URL
+        value: helm-limits-ms-base.banking.svc.cluster.local            
 
       
