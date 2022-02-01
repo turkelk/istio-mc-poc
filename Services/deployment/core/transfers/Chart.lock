@@ -1,6 +1,6 @@
 dependencies:
-- name: ms-common
+- name: ms-base
   repository: file://../../common/ms-base
   version: 1.0.0
-digest: sha256:6e17a34756bdb174ce4fcc4788486289d5f14a6e26988fbe4a5e2a4dfdfd6a1f
-generated: "2022-02-01T13:07:28.908+04:00"
+digest: sha256:8a0814746ca1ad6a502e186bc76f4bc0c15a5bb7f66d2a6843d795297a531d42
+generated: "2022-02-01T14:33:40.674995+04:00"
