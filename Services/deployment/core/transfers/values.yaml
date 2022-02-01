@@ -46,8 +46,8 @@ global:
   env: 
     values:
       - name: ACCOUNTS_URL
-        value: http://helm-accounts-ms-base.banking.svc.cluster.local  
+        value: http://helm-accounts-ms-base.banking.svc.cluster.local/api/v1  
       - name: LIMITS_URL
-        value: http://helm-limits-ms-base.banking.svc.cluster.local            
+        value: http://helm-limits-ms-base.banking.svc.cluster.local/api/v1            
 
       
