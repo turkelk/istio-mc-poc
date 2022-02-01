@@ -2,7 +2,7 @@ replicaCount: 1
 clusterName: sh2-cluster
 global:
   image:
-    repository: kadirzade/sh2-transfers
+    repository: kadirzade/sh2-transferssapi
     tag: v1
     pullPolicy: Always
 
