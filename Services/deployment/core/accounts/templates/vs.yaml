@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: accounts
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - banking
+  http:
+  - match:
+    - uri:
+        exact: /api/v1/accounts
+    route:
+    - destination:
+        host: helm-accounts-ms-base
+        port:
+          number: 80                   

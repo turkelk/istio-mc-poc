@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: banking
+  name: limits
 spec:
   hosts:
   - "*"
@@ -10,9 +10,9 @@ spec:
   http:
   - match:
     - uri:
-        exact: /api/v1/transfers
+        exact: /api/v1/limits
     route:
     - destination:
-        host: helm-retail-ms-base
+        host: helm-limits-ms-base
         port:
-          number: 80
+          number: 80                   

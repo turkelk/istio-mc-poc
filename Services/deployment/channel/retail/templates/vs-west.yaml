@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: retail
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - banking
+  http:
+  - match:
+    - uri:
+        exact: /api/v1/transfers
+    route:
+    - destination:
+        host: helm-retail-ms-base
+        port:
+          number: 80
