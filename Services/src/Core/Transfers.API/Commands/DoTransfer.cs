@@ -34,13 +34,7 @@ namespace Transfers.API.Commands
 
             var toAccount = getAccount.Result;
 
-            var getCustomer = await getCustomerByCifHandler.Handle(new GetCustomerByCif(fromAccount.CIF), context);
-            if (getCustomer.HasError)
-                return CommandResult.WithError(getCustomer.Errors);
-
-            var customer = getCustomer.Result;
-
-            var getLimit = await getCustomerLimitHandler.Handle(new GetCustomerLimit(customer.CIF), context);
+            var getLimit = await getCustomerLimitHandler.Handle(new GetCustomerLimit("1234"), context);
             if (getLimit.HasError)
                 return CommandResult.WithError(getLimit.Errors);
 
@@ -60,6 +54,6 @@ namespace Transfers.API.Commands
         public string Sender { get; }
         public string Receiver { get; }
         public double Amount { get; }
-        public string Currency { get; }        
+        public string Currency { get; }
     }
 }

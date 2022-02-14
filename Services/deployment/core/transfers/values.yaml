@@ -3,7 +3,7 @@ clusterName: sh2-cluster
 global:
   image:
     repository: kadirzade/sh2-transferssapi
-    tag: v1
+    tag: v2
     pullPolicy: Always
 
   service:
