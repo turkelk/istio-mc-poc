@@ -3,13 +3,19 @@ kind: Service
 metadata:
   name: helm-transfers-ms-base
   namespace: banking
+  labels:
+    app.kubernetes.io/instance: helm-transfers
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ms-base
+    app.kubernetes.io/version: 1.0.0
+    helm.sh/chart: ms-base-1.0.0
 spec:
   type: ClusterIP
   ports:
-    - port: 80
-      targetPort: http
-      protocol: TCP
-      name: http
+    - name: http
+      port: 80
+      protocol: TCP      
+      targetPort: 80
   selector:
     app.kubernetes.io/instance: helm-transfers
     app.kubernetes.io/name: ms-base

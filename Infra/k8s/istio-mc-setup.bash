@@ -94,3 +94,9 @@ EOF
 # kubectl --context="${CTX}" apply -f $ISTIO_DIR/samples/addons/jaeger.yaml
 # kubectl --context="${CTX}" apply -f $ISTIO_DIR/samples/addons/grafana.yaml
 
+
+kubectl --context="${CTX}" create ns banking
+kubectl --context="${CTX}" label ns banking istio-injection=enabled  
+kubectl --context="${CTX}" create ns argocd
+kubectl --context="${CTX}" apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml -n argocd
+

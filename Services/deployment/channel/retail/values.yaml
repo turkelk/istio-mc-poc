@@ -46,6 +46,6 @@ global:
   env: 
     values:
       - name: TRANSFERS_URL
-        value: http://helm-transfers-ms-base.banking.svc.cluster.local/api/v1/transfers            
+        value: http://helm-transfers-ms-base.banking.svc.cluster.local/api/v1/transfers                  
 
       

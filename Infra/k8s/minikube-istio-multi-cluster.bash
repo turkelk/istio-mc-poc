@@ -74,10 +74,10 @@
 
 set -e
 
-: ${PROFILE_NAME1:="istio-east-dxb"}
+: ${PROFILE_NAME1:="istio-east"}
 : ${METAL_LB_ADDRESSES1:="'192.168.99.70-192.168.99.84'"}
 
-: ${PROFILE_NAME2:="istio-west-auh"}
+: ${PROFILE_NAME2:="istio-west"}
 : ${METAL_LB_ADDRESSES2:="'192.168.99.85-192.168.99.98'"}
 
 : ${ISTIO_DIR:="$HOME/apps/istio-1.12.2"}

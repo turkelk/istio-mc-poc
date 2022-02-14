@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/turkelgadirzade/Desktop/Projects/Istio/src/Accounts/Accounts.API/Accounts.API.csproj",
+  "FilePath": "/Users/turkelgadirzade/Desktop/Work/Sahap2/Services/src/Channel/Retail.API/Retail.API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "Accounts.API",
+  "RootNamespace": "Retail.API",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
