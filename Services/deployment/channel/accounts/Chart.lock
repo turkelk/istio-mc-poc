@@ -1,0 +1,6 @@
+dependencies:
+- name: ms-base
+  repository: file://../../common/ms-base
+  version: 1.0.0
+digest: sha256:8a0814746ca1ad6a502e186bc76f4bc0c15a5bb7f66d2a6843d795297a531d42
+generated: "2022-02-01T15:06:32.556085+04:00"

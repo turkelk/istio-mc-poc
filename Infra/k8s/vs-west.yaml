@@ -6,7 +6,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - banking-gateway
+  - banking
   http:
   - match:
     - uri:
