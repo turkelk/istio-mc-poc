@@ -100,4 +100,5 @@ kubectl --context="${CTX}" label ns banking istio-injection=enabled
 kubectl --context="${CTX}" create ns argocd
 kubectl --context="${CTX}" apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml -n argocd
 kubectl --context="${CTX}" apply -f gateway.yaml -n banking
+kubectl --context="${CTX}" apply -f cross-network-gateway.yaml 
 

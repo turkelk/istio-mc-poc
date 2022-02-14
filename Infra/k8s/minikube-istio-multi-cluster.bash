@@ -56,8 +56,6 @@ $ISTIOCTL x create-remote-secret \
   --name=$PROFILE_NAME2 | \
   kubectl apply -f - --context="${PROFILE_NAME1}"
 
-kubectl --context="${PROFILE_NAME1}" apply -f vs-east.yaml
-kubectl --context="${PROFILE_NAME2}" apply -f vs-west.yaml   
-
-kubectl --context="${PROFILE_NAME1}" apply -f cross-network-gateway.yaml  
+kubectl --context="${PROFILE_NAME1}" apply -f vs-east.yaml -n banking
+kubectl --context="${PROFILE_NAME2}" apply -f vs-west.yaml -n banking    
 
