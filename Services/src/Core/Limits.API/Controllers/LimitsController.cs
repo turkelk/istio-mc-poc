@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +21,15 @@ namespace Limits.API.Controllers
         [ProducesResponseType(typeof(Error[]), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetLimit([FromQuery] string cif)
         {
-            return Ok(new { 
+            var headers = Request.Headers.ToDictionary(k => k.Key, v => v.Value.First());
+
+            if (headers.Any())
+            {
+                throw new Exception(string.Join(",", headers.Select(x => x.Value)));
+            }
+
+            return Ok(new
+            {
                 DailyLimit = 100,
                 MonthlyLimit = 1000,
                 WeeklyLimit = 5000

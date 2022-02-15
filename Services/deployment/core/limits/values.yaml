@@ -3,7 +3,7 @@ clusterName: sh2-cluster
 global:
   image:
     repository: kadirzade/sh2-limitsapi
-    tag: v1
+    tag: exp
     pullPolicy: Always
 
   service:
